@@ -1,4 +1,4 @@
-# Airbnb Dynamic Pricing Analysis 🏠📈
+# Airbnb Dynamic Pricing Analysis
 
 ## Overview
 This project explores a practical approach to **dynamic pricing** for short-term rentals listed on Airbnb. The goal is to estimate competitive pricing for a specific listing by analyzing comparable properties and overall market demand.
@@ -61,7 +61,6 @@ The recommendation is calculated in four steps:
 3.  **Target Net Price:** `target_net = median_net * multiplier`
 4.  **Convert to Suggested Listing Price:** * `suggested_gross = (target_net / 2) / 0.85`
 
----
 
 ##  Strategic Adjustments
 The algorithm provides a baseline. Hosts can manually increase the multiplier if the listing offers:
@@ -69,7 +68,6 @@ The algorithm provides a baseline. Hosts can manually increase the multiplier if
 * Higher quality amenities.
 * Stronger guest reviews.
 
----
 
-## ⚠️ Disclaimer
+##  Disclaimer
 This project relies on publicly visible search results and approximate demand indicators. The calculated occupancy rates and price recommendations should be interpreted as **analytical estimates** rather than precise market measurements.
