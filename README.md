@@ -64,7 +64,7 @@ The recommendation is calculated in four steps:
     * `1.10` if occupancy > 60%
     * `1.00` otherwise
 3.  **Target Net Price:** `target_net = median_net * multiplier`
-4.  **Convert to Suggested Listing Price:** * `suggested_gross = (target_net * 2) / 0.85`
+4.  **Convert to Suggested Listing Price:** * `suggested_gross = (target_net / 2) / 0.85`
 
 ---
 
@@ -79,16 +79,9 @@ The algorithm provides a baseline. Hosts can manually increase the multiplier if
 ## 🔧 Tools & Libraries
 * **Python**
 * **Pandas** & **NumPy** (Data Manipulation)
-* **Matplotlib** (Visualization)
 * **Requests** (Scraping utilities)
 
----
 
-## 🚀 Possible Extensions
-* Seasonal demand adjustments.
-* Automated data collection pipelines.
-* Machine learning models for price prediction.
-* Time-series analysis of demand trends.
 
 ---
 
