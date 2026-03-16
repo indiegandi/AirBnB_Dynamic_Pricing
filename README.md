@@ -7,9 +7,8 @@ The analysis focuses on listings in the same market segment and uses scraped sea
 
 The project was developed as an applied data analysis exercise and demonstrates how publicly visible marketplace data can be used to inform pricing decisions.
 
----
 
-## 🛠 Data Collection Challenges
+##  Data Collection Challenges
 Collecting listing data from Airbnb presents several technical constraints. Airbnb actively restricts automated scraping and frequently modifies the structure of its web pages.
 
 **The main challenges encountered:**
@@ -19,18 +18,16 @@ Collecting listing data from Airbnb presents several technical constraints. Airb
 
 > **Note:** Because of these limitations, the project focuses on collecting a **filtered subset** of listings that represent relevant competitors rather than attempting to capture the entire market.
 
----
 
-## 🎯 Competitor Selection
+## Competitor Selection
 Instead of scraping every listing in the region, the analysis filters for properties comparable to the target:
 * **Capacity:** Up to 4 guests.
 * **Amenities:** Must have a separate kitchen.
 * **Characteristics:** Similar property types.
 * **Price Range:** Weekend prices between **5,000 and 12,000 Turkish Lira**.
 
----
 
-## 📊 Estimating Market Occupancy
+## Estimating Market Occupancy
 Since Airbnb does not provide direct occupancy data, demand is approximated using **listing availability**.
 
 ### Method:
@@ -46,16 +43,14 @@ $$\text{Occupancy Rate} = \frac{\text{Total Listings} - \text{Available Listings
 * Search for April 10–12: **108 available listings**
 * Estimated occupancy: $(220 - 108) / 220 = 50.9\%$
 
----
 
-## 💰 Pricing Data Adjustment
+## Pricing Data Adjustment
 Airbnb displays "Gross Prices" (including cleaning fees and ~15% service fees). To determine the host's actual revenue, the algorithm converts these into **Net Values**:
 * **Platform commissions are removed** to find the effective revenue.
 * **Cleaning fees are included** in the adjusted nightly pricing to ensure fair comparison across different fee structures.
 
----
 
-## 🤖 Dynamic Pricing Algorithm
+## Dynamic Pricing Algorithm
 The recommendation is calculated in four steps:
 
 1.  **Market Benchmark:** Uses the **median** net price of comparable listings (more robust than the average).
@@ -68,20 +63,11 @@ The recommendation is calculated in four steps:
 
 ---
 
-## ✨ Strategic Adjustments
+##  Strategic Adjustments
 The algorithm provides a baseline. Hosts can manually increase the multiplier if the listing offers:
 * Superior location or interior design.
 * Higher quality amenities.
 * Stronger guest reviews.
-
----
-
-## 🔧 Tools & Libraries
-* **Python**
-* **Pandas** & **NumPy** (Data Manipulation)
-* **Requests** (Scraping utilities)
-
-
 
 ---
 
